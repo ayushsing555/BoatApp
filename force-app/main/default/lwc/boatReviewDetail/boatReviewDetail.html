@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Boat Details and Reviews">
+        <lightning-tabset>
+            <lightning-tab label="Detail">
+                <c-boat-detail boatid = {selectedBoatId}></c-boat-detail>
+            </lightning-tab>
+            <lightning-tab label="Reviews">
+                <c-boat-review boatid = {selectedBoatId} boatreviewdata={BoatReviewData}></c-boat-review>
+            </lightning-tab>
+            <lightning-tab label="Add Review">
+                <c-boat-add-review boatid={selectedBoatId} onrefresh = {refreshData}></c-boat-add-review>
+                </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
+</template>

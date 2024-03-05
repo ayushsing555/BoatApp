@@ -1,0 +1,40 @@
+<!-- addReview.html -->
+<template>
+    <lightning-card title="Add Review" class="slds-p-around_medium">
+        <template lwc:if={boatid}>
+            <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Name</label>
+                <div class="slds-form-element__control">
+                    <lightning-input value={selectedName} onchange={handleChange} name="name"></lightning-input>
+                </div>
+            </div>
+
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Rating</label>
+                <div class="slds-form-element__control">
+                    <lightning-input type="number" value={star} onchange={handleChange} name="star"></lightning-input>
+                </div>
+            </div>
+
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Comment</label>
+                <div class="slds-form-element__control">
+                    <lightning-input-rich-text value={myVal} onchange={handleChange}
+                        name="comment"></lightning-input-rich-text>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-button label="Add View" onclick={AddViews}></lightning-button>
+                </div>
+            </div>
+        </div>
+        </template>
+        <template lwc:else>
+            <div class="slds-var-p-around_small">
+                <h1>Please Select A Boat To Add Review</h1>
+            </div>
+        </template>
+    </lightning-card>
+</template>

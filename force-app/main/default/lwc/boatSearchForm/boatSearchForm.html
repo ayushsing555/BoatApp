@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Find A Boat">
+    <lightning-button variant="brand" label="Creat New Boat" slot="actions" onclick={createNewBoat}> </lightning-button>
+    <lightning-combobox class="slds-align_absolute-center select"  onchange={handleSearchOptionChange}
+      options={searchOptions} placeholder="Select a Boat Type"></lightning-combobox>
+  </lightning-card>
+
+  <!--spinner-->
+  <lightning-card title="Boat Results" class="slds-m-top_x-large">
+    <c-boat-search-results boattypeid={selectBoatTypeId}></c-boat-search-results>
+  </lightning-card>
+
+  <!--onloading={handleloading} ondoneloading={handledoneloading}-->
+</template>

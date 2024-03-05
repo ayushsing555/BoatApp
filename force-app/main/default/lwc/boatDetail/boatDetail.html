@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <div class="boat-tile slds-grid slds-wrap">
+            <template lwc:if={boatDetails}>
+                <div class="slds-grid slds-wrap">
+            <div class="slds-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                <!-- Image Section -->
+                <div class="slds-p-around_small">
+                    <img src={boatDetails.Picture__c} alt="Boat Image" class="slds-image" />
+                </div>
+            </div>
+            <div class="slds-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_8-of-12">
+                <!-- Details Section -->
+                <div class="slds-p-around_small">
+                    <p><strong>Name: </strong>{boatDetails.Name}</p>
+                    <p><strong>Boat Type: </strong>{boatDetails.BoatType__r.Name }</p>
+                    <p><strong>Price: </strong>{boatDetails.Price__c}</p>
+                    <p><strong>Length: </strong>{boatDetails.Length__c}</p>
+                </div>
+                <!-- Button Section -->
+                <div class="slds-p-around_small slds-align_absolute-center">
+                    <lightning-button label="View Details" onclick={handleDetail}></lightning-button>
+                </div>
+            </div>
+        </div>
+            </template>
+            <template lwc:else>
+            <div class="slds-var-p-around_small">
+                <h1>Please Select A Boat To Add Details</h1>
+            </div>
+        </template>
+        </div>
+    </lightning-card>
+</template>

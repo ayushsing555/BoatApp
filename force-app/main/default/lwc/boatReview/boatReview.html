@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Boat View" icon-name="standard:record">
+        <template lwc:if={boatreviewdata}>
+            <div class="scroll-container">
+            
+            <template for:each={boatreviewdata} for:item="boatReview">
+                <div key={boatReview.name} class="boat-review-container">
+                    <c-single-boat-review boatreview={boatReview}></c-single-boat-review>
+                </div>
+            </template>
+        </div>
+        </template>
+        <template lwc:else>
+            <div class="slds-var-p-around_small">
+                <h1>Please Select A Boat To see Reviews</h1>
+            </div>
+        </template>
+    </lightning-card>
+</template>

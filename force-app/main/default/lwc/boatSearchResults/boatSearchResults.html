@@ -1,0 +1,21 @@
+<template>
+  <lightning-tabset>
+    <lightning-tab label="Gallery">
+      <div class="slds-scrollable_y">
+        <template lwc:if={isLoadedData}>
+            <lightning-layout multiple-rows="true">
+           <template for:each={allBoats} for:item="boat" for:index="i">
+            <lightning-layout-item key={boat.i} size="4" onclick={handleClick} data-id
+            ={boat.Id}>
+               <c-boat-tile boat={boat}></c-boat-tile>
+            </lightning-layout-item>
+           </template>
+        </lightning-layout>
+        </template>
+      </div>
+    </lightning-tab>
+    <lightning-tab label="Boat Editor">
+        <c-boat-editor boatdata={allBoats} onrefresh={refreshData}></c-boat-editor>
+    </lightning-tab>
+  </lightning-tabset>
+</template>

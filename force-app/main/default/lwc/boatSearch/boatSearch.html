@@ -1,0 +1,9 @@
+<template>
+        <!-- top -->
+            <lightning-card title="Find A Boat">
+                <lightning-button  variant="brand" label="Creat New Boat" slot="actions" onclick={createNewBoat} >   </lightning-button>
+                <p class="slds-var-p-horizontal_small">
+                    <c-boat-search-form onsearch={handleEvent}></c-boat-search-form>
+                </p>
+            </lightning-card>
+</template>

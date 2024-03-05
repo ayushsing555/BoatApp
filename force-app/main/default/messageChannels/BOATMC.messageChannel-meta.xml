@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Boat FriendShip</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message Channel to pass Boat Coords updates</description>
+    <lightningMessageFields>
+        <fieldName>Boat</fieldName>
+        <description>This Contains All Boat Information</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>boatId</fieldName>
+        <description>This contains Single Boat Id </description>
+    </lightningMessageFields>
+</LightningMessageChannel>

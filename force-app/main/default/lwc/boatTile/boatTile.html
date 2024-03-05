@@ -1,0 +1,16 @@
+<template>
+  <lightning-card>
+    <div  class="boat-tile">
+      <div class="tile"></div>
+      <div class="lower-third" data-id={boat.Id} onclick={SelectedBoat}>
+        <img src={boat.Picture__c} alt="Boat Image" />
+        <div class="boat-details">
+          <p><strong>Name: </strong>{boat.Name}</p>
+          <p><strong>Boat Type: </strong>{boat.BoatType__r.Name }</p>
+          <p><strong>Price: </strong> { boat.Price__c }</p>
+          <p><strong>Length: </strong> {boat.Length__c }</p>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>
